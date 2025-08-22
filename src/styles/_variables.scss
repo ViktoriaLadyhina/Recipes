@@ -36,6 +36,7 @@ $headings-mobile: (
 );
 
 @mixin heading($level, $mobile-level: null) {
+   @if $mobile-level == null {$mobile-level: $level;}
   font-size: map-get(map-get($headings, $level), font-size);
   font-weight: map-get(map-get($headings, $level), font-weight);
   color: map-get(map-get($headings, $level), color);

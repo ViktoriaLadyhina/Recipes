@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux"
-import recipesSlice, { getRecipes } from "../../store/features/RecipeSlise"
-import './recipeList.scss'
+import recipesSlice, { getRecipes } from "../../store/features/RecipeSlice"
+import './recipesList.scss'
 import RecipeCard from '../recipeCard/RecipeCard'
 
-const RecepiesList = () => {
+const RecipesList = () => {
 
   const dispatch = useDispatch()
   const recipes = useSelector(recipesSlice.selectors.getAllRecipes)
@@ -32,4 +32,4 @@ const RecepiesList = () => {
   )
 }
 
-export default RecepiesList
+export default RecipesList

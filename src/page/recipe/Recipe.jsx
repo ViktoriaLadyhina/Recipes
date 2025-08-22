@@ -1,17 +1,17 @@
 import { useEffect } from "react";
 import { useParams } from "react-router";
-import recipesSlice, { getRecipes } from "../../store/features/RecipeSlise";
+import recipeSlice, { getRecipes } from "../../store/features/RecipeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import './recipe.scss'
 
 const Recipe = () => {
     const { id } = useParams();
     const dispatch = useDispatch()
-    const recipe = useSelector((state) => recipesSlice.selectors.getRecipeById(state, id));
+    const recipe = useSelector((state) => recipeSlice.selectors.getRecipeById(state, id));
 
-    const recipes = useSelector(recipesSlice.selectors.getAllRecipes);
-    const loading = useSelector(recipesSlice.selectors.getLoading);
-    const error = useSelector(recipesSlice.selectors.getError);
+    const recipes = useSelector(recipeSlice.selectors.getAllRecipes);
+    const loading = useSelector(recipeSlice.selectors.getLoading);
+    const error = useSelector(recipeSlice.selectors.getError);
 
     useEffect(() => {
         if (recipes.length === 0) {

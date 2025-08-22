@@ -1,9 +1,9 @@
-import RecepiesList from '../components/recipeList/RecepiesList'
+import RecipesList from '../components/recipeList/RecipesList'
 
 const Home = () => {
   return (
     <>
-    <RecepiesList />
+    <RecipesList />
     </>
   )
 }
