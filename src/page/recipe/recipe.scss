@@ -1,0 +1,88 @@
+@import "../../styles/variables";
+
+.container {
+    border-radius: 12px;
+
+  .recipe {
+    margin: 120px 24px 24px 24px;
+    padding: 10px;
+
+    &__title {
+      @include heading(h1, h1);
+      margin-bottom: 24px;
+    }
+
+    &__content {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    &__image {
+      max-width: 400px;
+      width: 100%;
+      flex: 0 1 auto; // позволяет уменьшаться на узких экранах
+      border-radius: 12px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+    }
+
+    &__details {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      & > * {
+        @include text(subtitle, subtitle);
+      }
+
+      .recipe__ingredients {
+        ol {
+          padding-left: 20px;
+
+          li {
+            @include text(body, body);
+          }
+        }
+      }
+    }
+
+    &__instructions {
+      margin-top: 32px;
+      padding: 16px;
+      background-color: var(--color-card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+      h2 {
+        @include heading(h2, h2);
+        margin-bottom: 16px;
+      }
+
+      p {
+        @include text(body, body);
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// ===== Адаптивность для мобильных экранов =====
+@media (max-width: 768px) {
+  .recipe {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__image {
+      max-width: 100%;
+    }
+  }
+}

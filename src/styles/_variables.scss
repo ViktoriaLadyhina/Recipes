@@ -1,0 +1,92 @@
+// ===== Цвета для светлой темы =====
+:root {
+  --color-bg: #faf6dc;
+  --color-card-bg: #ffffff;
+  --color-header-bg: #faf6dc;
+
+  --color-text: #222222;
+  --color-subheading: #555555;
+  --color-muted: #888888;
+
+  --color-accent: #c21807;
+  --color-link: #0077ff;
+}
+
+// ===== Заголовки =====
+$headings: (
+  h1: (
+    font-size: 72px,
+    font-weight: 700,
+    color: var(--color-text)
+  ),
+  h2: (
+    font-size: 34px,
+    font-weight: 600,
+    color: #333
+  )
+);
+
+$headings-mobile: (
+  h1: (
+    font-size: 40px
+  ),
+  h2: (
+    font-size: 24px
+  )
+);
+
+@mixin heading($level, $mobile-level: null) {
+  font-size: map-get(map-get($headings, $level), font-size);
+  font-weight: map-get(map-get($headings, $level), font-weight);
+  color: map-get(map-get($headings, $level), color);
+
+  @if $mobile-level != null {
+    @media (max-width: 768px) {
+      font-size: map-get(map-get($headings-mobile, $mobile-level), font-size);
+    }
+  }
+}
+
+// ===== Текст =====
+$texts: (
+  subtitle: (
+    font-size: 22px,
+    font-weight: 600,
+    color: var(--color-subheading)
+  ),
+  body: (
+    font-size: 18px,
+    font-weight: 400,
+    color: var(--color-text)
+  )
+);
+
+$texts-mobile: (
+  subtitle: (
+    font-size: 16px
+  ),
+  body: (
+    font-size: 14px
+  )
+);
+
+@mixin text($level, $mobile-level: null) {
+  font-size: map-get(map-get($texts, $level), font-size);
+  font-weight: map-get(map-get($texts, $level), font-weight);
+  color: map-get(map-get($texts, $level), color);
+  line-height: 1.5;
+
+  @if $mobile-level != null {
+    @media (max-width: 768px) {
+      font-size: map-get(map-get($texts-mobile, $mobile-level), font-size);
+    }
+  }
+}
+
+// ===== Карточки =====
+$card-padding: 16px;
+$card-radius: 12px;
+$card-bg: var(--color-card-bg);
+$card-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+$card-hover-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+$card-hover-bg: #fff9ef;
