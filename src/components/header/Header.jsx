@@ -1,38 +1,46 @@
 import { NavLink } from 'react-router';
-import './header.scss'
+import './header.scss';
 import { IoHeart } from "react-icons/io5";
-import { HiMenu, HiX } from 'react-icons/hi'; // иконки бургера и крестика
+import { HiMenu, HiX } from 'react-icons/hi';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import recipeSlice from '../../store/features/RecipeSlice';
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const favoriteId = useSelector(recipeSlice.selectors.getFavoriteRecipes);
 
-    const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
-    return (
-        <>
-            <header>
-                <div className="container">
-                    <div className="burger" onClick={toggleMenu}>
-                        {isOpen ? <HiX /> : <HiMenu />}
-                    </div>
-                    <nav className={`nav ${isOpen ? 'open' : ''}`}>
-                        <ul>
-                            <li><NavLink
-                                to="/"
-                                className={({ isActive }) => (isActive ? 'active' : '')}>
-                                All recipes</NavLink></li>
-                            <li><NavLink
-                                to="/categories"
-                                className={({ isActive }) => (isActive ? 'active' : '')}>
-                                Categories</NavLink></li>
-                        </ul>
-                    </nav>
-                    <div className='icons'><IoHeart /></div>
-                </div>
-            </header>
-        </>
-    )
-}
+  return (
+    <header className="header">
+      <div className="header__container container">
+        <div className="header__burger" onClick={toggleMenu}>
+          {isOpen ? <HiX /> : <HiMenu />}
+        </div>
 
-export default Header
+        <ul className={`header__nav ${isOpen ? 'header__nav--open' : ''}`}>
+          <li className="header__nav-item">
+            <NavLink to="/" className="header__nav-link">
+              All recipes
+            </NavLink>
+          </li>
+          <li className="header__nav-item">
+            <NavLink to="/categories" className="header__nav-link">
+              Categories
+            </NavLink>
+          </li>
+        </ul>
+
+        <div className="header__icons">
+          <NavLink to="/recipes/favoriteRecipes" className="header__icons-link">
+            <IoHeart />
+            <span className="header__icons-count">{favoriteId.length}</span>
+          </NavLink>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

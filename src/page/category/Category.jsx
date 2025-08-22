@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from "react-router";
 import { getCategory, getCategoryItems, selectCategoryLoading, selectCategoryError, getCurrentCategoryName } from '../../store/features/CategoriesSlice';
-import RecipeCard from '../../components/recipeCard/RecipeCard';
+import RecipeCard from '../../components/recipeCard/RecipeCard.jsx';
 import './category.scss'
 
 const Category = () => {
