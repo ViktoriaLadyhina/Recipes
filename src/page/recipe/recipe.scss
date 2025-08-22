@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 
 .container {
-    border-radius: 12px;
+  border-radius: 12px;
 
   .recipe {
     margin: 120px 24px 24px 24px;
@@ -19,17 +19,23 @@
     }
 
     &__image {
-      max-width: 400px;
       width: 100%;
-      flex: 0 1 auto; // позволяет уменьшаться на узких экранах
+      max-width: 500px; 
       border-radius: 12px;
       overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
 
       img {
         width: 100%;
         height: auto;
         display: block;
-        object-fit: cover;
       }
     }
 
@@ -39,7 +45,7 @@
       flex-direction: column;
       gap: 16px;
 
-      & > * {
+      &>* {
         @include text(subtitle, subtitle);
       }
 
@@ -60,19 +66,36 @@
       background-color: var(--color-card-bg);
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      }
 
       h2 {
         @include heading(h2, h2);
         margin-bottom: 16px;
       }
 
-      p {
+      p,
+      li {
         @include text(body, body);
         line-height: 1.6;
       }
     }
+
+    &__ingredients li {
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.03);
+        border-radius: 4px;
+      }
+    }
   }
 }
+
 
 // ===== Адаптивность для мобильных экранов =====
 @media (max-width: 768px) {

@@ -4,7 +4,7 @@ export const getRecipes = createAsyncThunk(
     'recipes/getRecipes',
     async () => {
         try {
-            const result = await fetch('https://dummyjson.com/recipes')
+            const result = await fetch(`${import.meta.env.VITE_API_BASE_URL}/recipes`)
             const data = await result.json()
             return data.recipes
         }

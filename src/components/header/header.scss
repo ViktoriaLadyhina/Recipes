@@ -7,7 +7,7 @@ header {
   width: 100%;
   z-index: 1000;
   background-color: var(--color-header-bg);;
-  padding: 32px 0;
+  padding: 32px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
@@ -45,7 +45,6 @@ header .container {
   .icons {
     font-size: 36px;
     color: var(--color-accent);
-    padding-right: 40px;
   }
 
   .burger {

@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import categoriesSlice, { getCategories } from '../../store/features/CategoriesSlice'
+import { getAllCategories, getCategories } from '../../store/features/CategoriesSlice';
 import './categories.scss'
+import { NavLink } from 'react-router'
 
 const Categories = () => {
   const dispatch = useDispatch()
-  const categories = useSelector(categoriesSlice.selectors.getAllCategories)
+
+  const categories = useSelector(getAllCategories);
 
   useEffect(() => {
     dispatch(getCategories())
@@ -18,9 +20,13 @@ const Categories = () => {
           <div className='categories__title'>Categories</div>
           <div className='categories__list'>
             {categories && categories.map((cat, id) => (
-              <div className='categories__list-card' key={id}>
+              
+                <NavLink to={`/categories/${cat}`} key={id}>
+                <div className='categories__list-card'>
                 <div className='categories__list-card--title'>{cat}</div>
-              </div>
+                </div>
+                </NavLink>
+          
             ))}
           </div>
         </div>
