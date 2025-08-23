@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllCategories, getCategories } from '../../store/features/CategoriesSlice';
 import './categories.scss'
 import { NavLink } from 'react-router'
+import BreadCrumbs from '../../components/breadCrumbs/BreadCrumbs';
 
 const Categories = () => {
   const dispatch = useDispatch()
@@ -13,10 +14,16 @@ const Categories = () => {
     dispatch(getCategories())
   }, [dispatch])
 
+  const history = [
+  { label: "All recipes", path: "/" },
+  { label: "Categories" }
+];
+
   return (
     <>
       <div className="container">
         <div className='categories'>
+          <BreadCrumbs history={history}/>
           <div className='categories__title'>Categories</div>
           <div className='categories__list'>
             {categories && categories.map((cat, id) => (

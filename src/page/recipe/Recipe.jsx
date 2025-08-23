@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import recipeSlice, { getRecipes } from "../../store/features/RecipeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import './recipe.scss'
+import BreadCrumbs from "../../components/breadCrumbs/BreadCrumbs";
 
 const Recipe = () => {
     const { id } = useParams();
@@ -23,11 +24,18 @@ const Recipe = () => {
     if (error) return <p>Error {error.message}</p>
     if (!recipe) return <div>Рецепт не найден</div>;
 
+      const history = [
+    { label: "All recipes", path: "/" },
+    { label: "Categories", path: "/categories" },
+    { label: recipe.tags[0], path: `/categories/${recipe.tags[0]}` }, 
+    { label: recipe.name } 
+  ];
 
     return (
         <>
             <div className="container">
                 <div className="recipe">
+                    <BreadCrumbs history={history}/>
                     <div className="recipe__title">{recipe.name}</div>
 
                     <div className="recipe__content">

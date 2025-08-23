@@ -2,7 +2,6 @@
 .container {
     .categories {
         margin: 24px;
-        margin-top: 120px;
 
         &__title {
             @include heading(h1);
