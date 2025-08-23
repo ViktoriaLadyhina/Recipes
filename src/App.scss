@@ -6,6 +6,7 @@
 }
 
 body {
+  background-color: var(--color-body-bg);
   color: var(--color-text);
 }
 
@@ -17,7 +18,7 @@ h2, h3 {
   width: 100%;
   max-width: 1460px; 
   margin: 0 auto;
-  background-color: var(--color-bg);
+  background-color: var(--color-container-bg);
 }
 
 ul {
@@ -29,4 +30,5 @@ ul {
 a {
   text-decoration: none !important;
   display: block;
+  color: var(--color-link);
 }
