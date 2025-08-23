@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+
+.breadCrumbs {
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 120px;
+
+    ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        padding: 6px 14px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background-color: var(--color-card-bg);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        a {
+            color: var(--color-text);
+            text-decoration: none;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff9ef;
+        }
+
+        &.active {
+            background-color: var(--color-header-bg);
+            cursor: default;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+            a {
+                pointer-events: none;
+                color: var(--color-text);
+            }
+
+            span {
+                background: none;
+                padding: 0;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .arrow {
+        font-size: 18px;
+        margin: 0 2px;
+        color: var(--color-subheading);
+        display: flex;
+        align-items: center;
+    }
+}

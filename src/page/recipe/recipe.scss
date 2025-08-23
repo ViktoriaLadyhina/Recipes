@@ -4,12 +4,11 @@
   border-radius: 12px;
 
   .recipe {
-    margin: 120px 24px 24px 24px;
     padding: 10px;
 
     &__title {
       @include heading(h1, h1);
-      margin-bottom: 24px;
+      margin: 24px 0;
     }
 
     &__content {

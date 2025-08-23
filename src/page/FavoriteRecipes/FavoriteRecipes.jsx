@@ -3,6 +3,7 @@ import recipeSlice, { getRecipes } from '../../store/features/RecipeSlice';
 import RecipeCard from '../../components/recipeCard/RecipeCard';
 import './favoriteRecipes.scss'
 import { useEffect } from 'react';
+import BreadCrumbs from '../../components/breadCrumbs/BreadCrumbs';
 
 const FavoriteRecipes = () => {
   const dispatch = useDispatch()
@@ -18,9 +19,15 @@ const FavoriteRecipes = () => {
 
   const favoriteRecipes = recipes.filter(rec => favoriteId.includes(rec.id));
 
+  const history = [
+  { label: "All recipes", path: "/" },
+  { label: "Favorite recipes" }
+];
+
   return (
     <div className='container'>
       <div className='favorite'>
+        <BreadCrumbs history={history}/>
         <div className='favorite__title'>Favorite recipes</div>
         <div className='favorite__container'>
           {loading ? (<div>Loading recipes...</div>) :
