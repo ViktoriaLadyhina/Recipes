@@ -1,11 +1,11 @@
-# Recipes SPA / SPA для Рецептов
+# Recipes SPA / Recipes SPA (Deutsch) / SPA для Рецептов
 
 ## English Version
 
 ### Project
 
 Recipes SPA is a learning single-page application (SPA) for browsing and managing recipes.
-It was created to practice modern frontend development skills using **React**, **Redux Toolkit**, and SPA patterns.
+It was created to practice modern frontend development skills using React, Redux Toolkit, and SPA patterns.
 
 ### Features
 
@@ -17,12 +17,12 @@ It was created to practice modern frontend development skills using **React**, *
 * Category-specific recipes page
 * Recipe detail page (photo, title, cooking time, rating, servings, ingredients, instructions)
 * Breadcrumbs navigation (dynamic, based on page context)
+* Dark / light theme (switchable via header theme toggle)
 
 ### Upcoming Features
 
 * Recipe search with live filtering
 * Filters and sorting
-* Dark / light theme
 * Pagination or infinite scroll (optional)
 
 ### Technologies Used
@@ -39,6 +39,48 @@ It was created to practice modern frontend development skills using **React**, *
 
 This project is intended for learning and experimentation.
 It demonstrates SPA architecture, responsive design, and modern frontend best practices.
+
+---
+
+## Deutsche Version
+
+### Projekt
+
+Recipes SPA ist eine Lern-Single-Page-Anwendung (SPA) zum Durchstöbern und Verwalten von Rezepten.
+Es wurde erstellt, um moderne Frontend-Entwicklungsfähigkeiten mit React, Redux Toolkit und SPA-Mustern zu üben.
+
+### Funktionen
+
+* Header-Komponente mit Navigationsmenü (Alle Rezepte, Alle Kategorien, Favoriten)
+* Seite mit allen Rezepten
+* Favoriten-Seite (vom Benutzer als Favorit markierte Rezepte)
+* Rezeptkarten (Foto, Titel, Kochzeit, Bewertung) mit Herz-Symbol für Favoriten
+* Seite mit allen Kategorien
+* Kategoriespezifische Rezepteseite
+* Rezeptdetailseite (Foto, Titel, Kochzeit, Bewertung, Portionen, Zutaten, Zubereitung)
+* Breadcrumbs-Navigation (dynamisch, basierend auf dem Seitenkontext)
+* Dunkles / Helles Thema (umschaltbar über den Theme-Switcher im Header)
+
+### Geplante Funktionen
+
+* Rezeptsuche mit Live-Filter
+* Filter und Sortierung
+* Paginierung oder Infinite Scroll (optional)
+
+### Verwendete Technologien
+
+* React
+* Redux Toolkit
+* React Router
+* SCSS (Sass)
+* Vite
+* ESLint
+* React Icons
+
+### Über das Projekt
+
+Dieses Projekt dient zum Lernen und Experimentieren.
+Es demonstriert SPA-Architektur, responsives Design und moderne Best Practices der Frontend-Entwicklung.
 
 ---
 
@@ -59,12 +101,12 @@ SPA для Рецептов — учебное одностраничное пр
 * Страница рецептов определённой категории
 * Страница рецепта (фото, название, время приготовления, рейтинг, количество порций, ингредиенты, инструкция приготовления)
 * Хлебные крошки (динамические, формируются на каждой странице в зависимости от контекста)
+* Темная / светлая тема (переключение через кнопку в шапке)
 
 ### Планируемые возможности
 
 * Поиск рецептов с живой фильтрацией
 * Фильтры и сортировка
-* Темная / светлая тема
 * Пагинация или бесконечная прокрутка (по желанию)
 
 ### Используемые технологии

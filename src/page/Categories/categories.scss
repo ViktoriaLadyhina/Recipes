@@ -1,39 +1,43 @@
 @import "../../styles/variables";
+
 .container {
-    .categories {
-        margin: 24px;
+  .categories {
+    margin: 24px;
 
-        &__title {
-            @include heading(h1);
-            padding: 24px;
-        }
+    &__title {
+      @include heading(h1);
+      padding: 24px;
+    }
 
-        &__list {
-        display: grid;
-        gap: 24px;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    
-        &-card {
+    &__list {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+      &-card {
         min-width: 200px;
         min-height: 60px;
-        padding: $card-padding;   
-        background-color: $card-bg;  
-        border-radius: $card-radius; 
-        box-shadow: $card-shadow;    
+        padding: $card-padding;
+        background-color: $card-bg;
+        border-radius: $card-radius;
+        box-shadow: $card-shadow;
         cursor: pointer;
         transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 
-            &:hover {
-                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); 
-                background-color: #fff9ef; 
-            }
+        &:hover {
+          box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+          background-color: var(--color-card-hover-bg);
+          color: var(--color-card-hover-text); 
+        }
 
-            &--title {
-          @include heading(h2);       
+        &--title {
+          @include heading(h2);
           text-align: center;
-            }
-        }}
+          color: var(--color-text);
+        }
+      }
     }
+  }
 }
 
 @media (max-width: 768px) {
@@ -46,7 +50,7 @@
 
   .categories__list-card {
     &--title {
-      font-size: 20px;   // уменьшили размер заголовка
+      font-size: 20px; // уменьшили размер заголовка
     }
   }
 }

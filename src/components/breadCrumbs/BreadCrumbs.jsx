@@ -4,7 +4,6 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import './breadCrumbs.scss'
 
 const BreadCrumbs = ({ history }) => {
-  if (!history || history.length === 0) return null;
 
   return (
     <nav className="breadCrumbs">

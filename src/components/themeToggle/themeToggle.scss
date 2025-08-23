@@ -1,0 +1,22 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  &.light svg {
+    color: var(--color-text);
+  }
+
+  &.dark svg {
+    color: var(--color-accent);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

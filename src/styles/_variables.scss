@@ -1,47 +1,65 @@
 // ===== Цвета для светлой темы =====
 :root {
-  --color-bg: #faf6dc;
-  --color-card-bg: #ffffff;
-  --color-header-bg: #faf6dc;
+  --color-body-bg: #ffffff; // общий фон страницы
+  --color-container-bg: #faf6dc; // фон контейнера
+  --color-card-bg: #ffffff; // фон карточек
+  --color-header-bg: #f4e8b0; // Фон шапки
+  --header-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); // тень для шапки
+  --color-card-hover-bg: #fff9ef; // фон хлебных крошек при наведении (hover)
 
-  --color-text: #222222;
-  --color-subheading: #555555;
-  --color-muted: #888888;
+  --color-text: #222222; // Основной текст 
+  --color-subheading: #555555; //Подзаголовки
+  --color-muted: #888888; // Второстепенный текст
 
-  --color-accent: #c21807;
-  --color-link: #0077ff;
+  --color-accent: #c21807; // Акценты, кнопки, важные элементы
+  --color-link: #0077ff; // Ссылки
+  --color-card-hover-text: #222222; // тёмный текст на ярком hover фоне карточки категорий
+}
+
+
+// ===== Цвета для тёмной темы =====
+[data-theme="dark"] {
+  --color-body-bg: #000000;        // фон страницы
+  --color-container-bg: #1f1f1f;   // фон контейнера
+  --color-card-bg: #2a2a2a;        // фон карточек
+  --color-header-bg: #2a2a2a;   // фон шапки
+  --header-shadow: 0 8px 20px rgba(255, 255, 255, 0.1); // тень для шапки
+   --color-card-hover-bg: #3a3a3a; // фон хлебных крошек при наведении (hover)
+
+  --color-text: #f5f5f5;           // основной текст
+  --color-subheading: #cccccc;     // подзаголовки
+  --color-muted: #aaaaaa;          // второстепенный текст
+
+  --color-accent: #ff6b6b;         // основной акцент
+  --color-link: #4da3ff;           // ссылки
+   --color-card-hover-text: #ffffff; // светлый текст на ярком hover фоне карточки категорий
 }
 
 // ===== Заголовки =====
-$headings: (
-  h1: (
-    font-size: 72px,
+$headings: ( // большой экран
+  h1: (font-size: 72px,
     font-weight: 700,
-    color: var(--color-text)
-  ),
-  h2: (
-    font-size: 34px,
+    color: var(--color-text)),
+  h2: (font-size: 34px,
     font-weight: 600,
-    color: #333
-  )
+    color: var(--color-text))
 );
 
-$headings-mobile: (
-  h1: (
-    font-size: 40px
-  ),
-  h2: (
-    font-size: 24px
-  )
+$headings-mobile: ( // мобильные версии
+  h1: (font-size: 40px),
+  h2: (font-size: 24px)
 );
 
 @mixin heading($level, $mobile-level: null) {
-   @if $mobile-level == null {$mobile-level: $level;}
+  @if $mobile-level ==null {
+    $mobile-level: $level;
+  }
+
   font-size: map-get(map-get($headings, $level), font-size);
   font-weight: map-get(map-get($headings, $level), font-weight);
   color: map-get(map-get($headings, $level), color);
 
-  @if $mobile-level != null {
+  @if $mobile-level !=null {
     @media (max-width: 768px) {
       font-size: map-get(map-get($headings-mobile, $mobile-level), font-size);
     }
@@ -50,25 +68,17 @@ $headings-mobile: (
 
 // ===== Текст =====
 $texts: (
-  subtitle: (
-    font-size: 22px,
+  subtitle: (font-size: 22px,
     font-weight: 600,
-    color: var(--color-subheading)
-  ),
-  body: (
-    font-size: 18px,
+    color: var(--color-subheading)),
+  body: (font-size: 18px,
     font-weight: 400,
-    color: var(--color-text)
-  )
+    color: var(--color-text))
 );
 
 $texts-mobile: (
-  subtitle: (
-    font-size: 16px
-  ),
-  body: (
-    font-size: 14px
-  )
+  subtitle: (font-size: 16px),
+  body: (font-size: 14px)
 );
 
 @mixin text($level, $mobile-level: null) {
@@ -77,7 +87,7 @@ $texts-mobile: (
   color: map-get(map-get($texts, $level), color);
   line-height: 1.5;
 
-  @if $mobile-level != null {
+  @if $mobile-level !=null {
     @media (max-width: 768px) {
       font-size: map-get(map-get($texts-mobile, $mobile-level), font-size);
     }
@@ -85,9 +95,9 @@ $texts-mobile: (
 }
 
 // ===== Карточки =====
-$card-padding: 16px;
-$card-radius: 12px;
-$card-bg: var(--color-card-bg);
-$card-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-$card-hover-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-$card-hover-bg: #fff9ef;
+$card-padding: 16px;             // внутренний отступ (padding) внутри карточки
+$card-radius: 12px;              // скругление углов карточки (border-radius)
+$card-bg: var(--color-card-bg);  // фон карточки (использует переменную темы)
+$card-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);      // тень карточки в обычном состоянии
+$card-hover-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); // тень карточки при наведении (hover)
+$card-hover-bg: #fff9ef;         // фон карточки при наведении (hover)

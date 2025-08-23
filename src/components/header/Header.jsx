@@ -5,6 +5,7 @@ import { HiMenu, HiX } from 'react-icons/hi';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import recipeSlice from '../../store/features/RecipeSlice';
+import ThemeToggle from '../themeToggle/ThemeToggle';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,9 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container container">
+
+        <ThemeToggle />
+
         <div className="header__burger" onClick={toggleMenu}>
           {isOpen ? <HiX /> : <HiMenu />}
         </div>
