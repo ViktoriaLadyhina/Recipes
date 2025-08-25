@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+
+.category-card {
+    max-width: 335px;
+    width: 100%;
+    padding: $card-padding;
+    background-color: $card-bg;
+    border-radius: $card-radius;
+    box-shadow: $card-shadow;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+
+    &:hover {
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+        background-color: var(--color-card-hover-bg);
+        color: var(--color-card-hover-text);
+    }
+
+    &__title {
+        @include heading(h2);
+        text-align: center;
+        color: var(--color-text);
+    }
+}

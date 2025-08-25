@@ -1,10 +1,12 @@
 # Recipes SPA / Recipes SPA (Deutsch) / SPA для Рецептов
 
+---
+
 ## English Version
 
 ### Project
 
-Recipes SPA is a learning single-page application (SPA) for browsing and managing recipes.
+Recipes SPA is a learning single-page application (SPA) for browsing and managing recipes.  
 It was created to practice modern frontend development skills using React, Redux Toolkit, and SPA patterns.
 
 ### Features
@@ -12,16 +14,16 @@ It was created to practice modern frontend development skills using React, Redux
 * Header component with navigation menu (All Recipes, All Categories, Favorite Recipes)
 * All Recipes page
 * Favorite Recipes page (recipes marked as favorite by the user)
-* Recipe cards (photo, title, cooking time, rating) with a "favorite" heart icon
+* Recipe cards (photo, name, cooking time, rating) with a "favorite" heart icon
 * All Categories page
 * Category-specific recipes page
-* Recipe detail page (photo, title, cooking time, rating, servings, ingredients, instructions)
+* Recipe detail page (photo, name, cooking time, rating, servings, ingredients, instructions)
 * Breadcrumbs navigation (dynamic, based on page context)
-* Dark / light theme (switchable via header theme toggle)
+* Dark / light theme (switchable via header toggle)
+* Recipe and Category search with live filtering 
 
 ### Upcoming Features
 
-* Recipe search with live filtering
 * Filters and sorting
 * Pagination or infinite scroll (optional)
 
@@ -37,7 +39,7 @@ It was created to practice modern frontend development skills using React, Redux
 
 ### About
 
-This project is intended for learning and experimentation.
+This project is intended for learning and experimentation.  
 It demonstrates SPA architecture, responsive design, and modern frontend best practices.
 
 ---
@@ -46,7 +48,7 @@ It demonstrates SPA architecture, responsive design, and modern frontend best pr
 
 ### Projekt
 
-Recipes SPA ist eine Lern-Single-Page-Anwendung (SPA) zum Durchstöbern und Verwalten von Rezepten.
+Recipes SPA ist eine Lern-Single-Page-Anwendung (SPA) zum Durchstöbern und Verwalten von Rezepten.  
 Es wurde erstellt, um moderne Frontend-Entwicklungsfähigkeiten mit React, Redux Toolkit und SPA-Mustern zu üben.
 
 ### Funktionen
@@ -54,16 +56,16 @@ Es wurde erstellt, um moderne Frontend-Entwicklungsfähigkeiten mit React, Redux
 * Header-Komponente mit Navigationsmenü (Alle Rezepte, Alle Kategorien, Favoriten)
 * Seite mit allen Rezepten
 * Favoriten-Seite (vom Benutzer als Favorit markierte Rezepte)
-* Rezeptkarten (Foto, Titel, Kochzeit, Bewertung) mit Herz-Symbol für Favoriten
+* Rezeptkarten (Foto, Name, Kochzeit, Bewertung) mit Herz-Symbol für Favoriten
 * Seite mit allen Kategorien
 * Kategoriespezifische Rezepteseite
-* Rezeptdetailseite (Foto, Titel, Kochzeit, Bewertung, Portionen, Zutaten, Zubereitung)
+* Rezeptdetailseite (Foto, Name, Kochzeit, Bewertung, Portionen, Zutaten, Zubereitung)
 * Breadcrumbs-Navigation (dynamisch, basierend auf dem Seitenkontext)
-* Dunkles / Helles Thema (umschaltbar über den Theme-Switcher im Header)
+* Dunkles / helles Thema (umschaltbar über den Theme-Switcher im Header)
+* Rezept- und Kategoriesuche mit Live-Filter
 
 ### Geplante Funktionen
 
-* Rezeptsuche mit Live-Filter
 * Filter und Sortierung
 * Paginierung oder Infinite Scroll (optional)
 
@@ -79,7 +81,7 @@ Es wurde erstellt, um moderne Frontend-Entwicklungsfähigkeiten mit React, Redux
 
 ### Über das Projekt
 
-Dieses Projekt dient zum Lernen und Experimentieren.
+Dieses Projekt dient zum Lernen und Experimentieren.  
 Es demonstriert SPA-Architektur, responsives Design und moderne Best Practices der Frontend-Entwicklung.
 
 ---
@@ -88,7 +90,7 @@ Es demonstriert SPA-Architektur, responsives Design und moderne Best Practices d
 
 ### Проект
 
-SPA для Рецептов — учебное одностраничное приложение для просмотра и управления рецептами.
+SPA для Рецептов — учебное одностраничное приложение для просмотра и управления рецептами.  
 Создано для практики современных навыков фронтенд-разработки с использованием React, Redux Toolkit и SPA-паттернов.
 
 ### Возможности
@@ -99,13 +101,13 @@ SPA для Рецептов — учебное одностраничное пр
 * Карточки рецептов (фото, название, время приготовления, рейтинг) с иконкой "сердечко" для избранного
 * Страница всех категорий
 * Страница рецептов определённой категории
-* Страница рецепта (фото, название, время приготовления, рейтинг, количество порций, ингредиенты, инструкция приготовления)
+* Страница рецепта (фото, название, время приготовления, рейтинг, порции, ингредиенты, инструкция)
 * Хлебные крошки (динамические, формируются на каждой странице в зависимости от контекста)
 * Темная / светлая тема (переключение через кнопку в шапке)
+* Поиск по рецептам и категориям с живой фильтрацией
 
 ### Планируемые возможности
 
-* Поиск рецептов с живой фильтрацией
 * Фильтры и сортировка
 * Пагинация или бесконечная прокрутка (по желанию)
 
@@ -121,5 +123,5 @@ SPA для Рецептов — учебное одностраничное пр
 
 ### О проекте
 
-Проект предназначен для обучения и экспериментов.
+Проект предназначен для обучения и экспериментов.  
 Демонстрирует архитектуру SPA, адаптивный дизайн и современные практики фронтенд-разработки.

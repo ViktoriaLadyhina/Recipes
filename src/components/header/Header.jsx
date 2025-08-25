@@ -1,6 +1,7 @@
-import { NavLink } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import './header.scss';
 import { IoHeart } from "react-icons/io5";
+import { IoMdSearch } from "react-icons/io";
 import { HiMenu, HiX } from 'react-icons/hi';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -37,7 +38,8 @@ const Header = () => {
         </ul>
 
         <div className="header__icons">
-          <NavLink to="/recipes/favoriteRecipes" className="header__icons-link">
+          <NavLink to='/recipes/search' aria-label='Search recipes'><span className='header__icons-search'><IoMdSearch /></span></NavLink>
+          <NavLink to="/recipes/favoriteRecipes" className="header__icons-heart" aria-label="Favorite recipes">
             <IoHeart />
             <span className="header__icons-count">{favoriteId.length}</span>
           </NavLink>
