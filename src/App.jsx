@@ -6,6 +6,7 @@ import Layout from "./components/Layout"
 import Recipe from './page/recipe/Recipe'
 import Category from './page/category/Category'
 import FavoriteRecipes from './page/FavoriteRecipes/FavoriteRecipes'
+import Search from './page/search/Search'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="categories" element={<Categories />} />
           <Route path="/categories/:categoryId" element={<Category />} />
           <Route path="/recipes/favoriteRecipes" element={<FavoriteRecipes />} />
+          <Route path='/recipes/search' element={<Search />} />
 
           <Route path="*" element={<h1>Такой страницы не существует</h1>} />
         </Route>

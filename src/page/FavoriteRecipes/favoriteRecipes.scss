@@ -3,6 +3,7 @@
 .container {
     .favorite {
         margin: 24px;
+         padding-bottom: 40px;
 
         &__title {
             @include heading(h1);

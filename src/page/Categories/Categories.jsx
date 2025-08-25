@@ -4,6 +4,7 @@ import { getAllCategories, getCategories } from '../../store/features/Categories
 import './categories.scss'
 import { NavLink } from 'react-router'
 import BreadCrumbs from '../../components/breadCrumbs/BreadCrumbs';
+import CategoryCard from '../../components/categoryCard/CategoryCard';
 
 const Categories = () => {
   const dispatch = useDispatch()
@@ -25,17 +26,11 @@ const Categories = () => {
         <div className='categories'>
           <BreadCrumbs history={history}/>
           <div className='categories__title'>Categories</div>
-          <div className='categories__list'>
-            {categories && categories.map((cat, id) => (
-              
-                <NavLink to={`/categories/${cat}`} key={id}>
-                <div className='categories__list-card'>
-                <div className='categories__list-card--title'>{cat}</div>
-                </div>
-                </NavLink>
-          
-            ))}
-          </div>
+<div className="categories__list">
+    {categories && categories.map((cat, id) => (
+        <CategoryCard key={id} category={cat} />
+    ))}
+</div>
         </div>
       </div>
     </>

@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+
+.container {
+    .search {
+        margin: 24px;
+        padding-bottom: 40px;
+
+        &__title {
+            @include heading(h1);
+            padding: 24px;
+        }
+
+        &__input {
+            padding: 10px;
+            width: 100%;
+            max-width: 420px;
+            @include text(body, body);
+            background-color: var(--color-card-bg);
+            border-radius: 8px;
+            border: 1px solid #ccc;
+
+            &::placeholder {
+                color: var(--color-subheading);
+                opacity: 1;
+            }
+        }
+
+        &__results {
+            @include text(body, body);
+            padding-bottom: 24px;
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 335px));
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        &__message {
+            display: block;
+            text-align: center;
+            @include text(subtitle);
+            padding-bottom: 40px;
+        }
+
+        &__subtitle {
+            @include heading(h2);
+            margin: 32px 0 16px;
+            text-align: center;
+            color: var(--color-text);
+        }
+
+        &__list {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 335px));
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+    }
+}
