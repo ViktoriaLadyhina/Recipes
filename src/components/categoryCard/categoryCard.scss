@@ -21,4 +21,22 @@
         text-align: center;
         color: var(--color-text);
     }
+
+    @media (max-width: 1000px) {
+    &__title {
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__title {
+      font-size: 18px;
+    }
+  }
 }
