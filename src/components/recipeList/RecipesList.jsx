@@ -1,13 +1,18 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux"
-import recipesSlice, { getRecipes } from "../../store/features/RecipeSlice"
+import recipeSlice, { getRecipes } from "../../store/features/RecipeSlice"
 import './recipesList.scss'
 import RecipeCard from '../recipeCard/RecipeCard'
+import FiltersSort from '../filterSort/FilterSort'
+import { selectFilteredSortedRecipes } from '../../store/features/FiltersSlice'
 
 const RecipesList = () => {
 
   const dispatch = useDispatch()
-  const recipes = useSelector(recipesSlice.selectors.getAllRecipes)
+
+  const allRecipes = useSelector(recipeSlice.selectors.getAllRecipes)
+  const filtersState = useSelector(state => state.filters)
+  const recipes = selectFilteredSortedRecipes(allRecipes, filtersState)
 
   useEffect(() => {
     dispatch(getRecipes())
@@ -19,12 +24,17 @@ const RecipesList = () => {
       <div className="container">
         <div className='recipes'>
           <div className='recipes__title'>All recipes</div>
+          <FiltersSort />
           <div className='recipes__container'>
-            {recipes && recipes.map((r) => (
-              <div key={r.id}>
-                <RecipeCard recipe={r} />
-              </div>
-            ))}
+            {recipes && recipes.length > 0 ? (
+              recipes.map((r) => (
+                <div key={r.id}>
+                  <RecipeCard recipe={r} />
+                </div>
+              ))
+            ) : (
+              <div className="recipes__empty">No recipes found</div>
+            )}
           </div>
         </div>
       </div>

@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import './search.scss';
 import BreadCrumbs from '../../components/breadCrumbs/BreadCrumbs';
 import recipeSlice, { getRecipes } from '../../store/features/RecipeSlice';
-import { getCategories } from '../../store/features/CategoriesSlice'; // если нет — создаём
+import { getCategories } from '../../store/features/CategoriesSlice'; 
 import RecipeCard from '../../components/recipeCard/RecipeCard';
-import { NavLink } from 'react-router-dom';
 import CategoryCard from '../../components/categoryCard/CategoryCard';
 
 const Search = () => {
@@ -13,7 +12,7 @@ const Search = () => {
     const dispatch = useDispatch();
 
     const recipes = useSelector(recipeSlice.selectors.getAllRecipes);
-    const categories = useSelector(state => state.categories.items); // массив строк категорий
+    const categories = useSelector(state => state.categories.items); 
 
     const [filteredResults, setFilteredResults] = useState({
         recipes: [],

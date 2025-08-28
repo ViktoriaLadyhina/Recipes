@@ -21,10 +21,10 @@ It was created to practice modern frontend development skills using React, Redux
 * Breadcrumbs navigation (dynamic, based on page context)
 * Dark / light theme (switchable via header toggle)
 * Recipe and Category search with live filtering 
+* Filters and sorting
 
 ### Upcoming Features
 
-* Filters and sorting
 * Pagination or infinite scroll (optional)
 
 ### Technologies Used
@@ -63,10 +63,10 @@ Es wurde erstellt, um moderne Frontend-Entwicklungsfähigkeiten mit React, Redux
 * Breadcrumbs-Navigation (dynamisch, basierend auf dem Seitenkontext)
 * Dunkles / helles Thema (umschaltbar über den Theme-Switcher im Header)
 * Rezept- und Kategoriesuche mit Live-Filter
+* Filter und Sortierung
 
 ### Geplante Funktionen
 
-* Filter und Sortierung
 * Paginierung oder Infinite Scroll (optional)
 
 ### Verwendete Technologien
@@ -105,10 +105,10 @@ SPA для Рецептов — учебное одностраничное пр
 * Хлебные крошки (динамические, формируются на каждой странице в зависимости от контекста)
 * Темная / светлая тема (переключение через кнопку в шапке)
 * Поиск по рецептам и категориям с живой фильтрацией
+* Фильтры и сортировка
 
 ### Планируемые возможности
 
-* Фильтры и сортировка
 * Пагинация или бесконечная прокрутка (по желанию)
 
 ### Используемые технологии
