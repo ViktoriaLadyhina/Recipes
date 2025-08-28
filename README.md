@@ -22,10 +22,7 @@ It was created to practice modern frontend development skills using React, Redux
 * Dark / light theme (switchable via header toggle)
 * Recipe and Category search with live filtering 
 * Filters and sorting
-
-### Upcoming Features
-
-* Pagination or infinite scroll (optional)
+* Pagination 
 
 ### Technologies Used
 
@@ -64,10 +61,7 @@ Es wurde erstellt, um moderne Frontend-Entwicklungsfähigkeiten mit React, Redux
 * Dunkles / helles Thema (umschaltbar über den Theme-Switcher im Header)
 * Rezept- und Kategoriesuche mit Live-Filter
 * Filter und Sortierung
-
-### Geplante Funktionen
-
-* Paginierung oder Infinite Scroll (optional)
+* Paginierung 
 
 ### Verwendete Technologien
 
@@ -106,10 +100,7 @@ SPA для Рецептов — учебное одностраничное пр
 * Темная / светлая тема (переключение через кнопку в шапке)
 * Поиск по рецептам и категориям с живой фильтрацией
 * Фильтры и сортировка
-
-### Планируемые возможности
-
-* Пагинация или бесконечная прокрутка (по желанию)
+* Пагинация 
 
 ### Используемые технологии
 
