@@ -1,0 +1,140 @@
+@import "../../styles/variables";
+
+/* ===== Контейнер фильтров ===== */
+.filters {
+  width: 100%;
+  padding-bottom: 36px;
+
+  /* ===== Заголовок с кнопкой и сортировкой ===== */
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* ===== Кнопка переключения фильтров ===== */
+  /* ===== Кнопка очистки фильтров ===== */
+  &__button {
+    flex: 0 0 auto;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    color: #fff;
+    background-color: var(--color-accent);
+    font-size: 18px;
+
+    &:hover {
+      // background-color: var(--color-accent-hover);
+      transition: all 0.2s ease-in-out;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  /* ===== Выпадающее меню фильтров ===== */
+  &__dropdown {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background-color: var(--color-container-bg);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease, visibility 0.35s ease;
+
+    &.active {
+      max-height: 800px; // достаточно для всех фильтров
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ===== Группы фильтров ===== */
+    .filters__group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 180px;
+
+      label {
+        @include text(subtitle, subtitle);
+      }
+
+      input,
+      select {
+        @include text(body, body);
+        height: 36px;
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background-color: var(--color-card-bg);
+        color: var(--color-text);
+
+        &::placeholder {
+          @include text(body, body);
+        }
+
+        &:focus {
+          outline: none;
+          border-color: var(--color-accent);
+          box-shadow: 0 0 4px rgba(194, 24, 7, 0.5);
+        }
+      }
+    }
+  }
+
+  /* ===== Блок сортировки ===== */
+  .filters__sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    label {
+      @include text(subtitle, subtitle);
+    }
+
+    select {
+      @include text(body, body);
+      height: 36px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background-color: var(--color-card-bg);
+      color: var(--color-text);
+
+      &:focus {
+        outline: none;
+        border-color: var(--color-accent);
+        box-shadow: 0 0 4px rgba(194, 24, 7, 0.5);
+      }
+    }
+  }
+}
+
+/* ===== Адаптивность ===== */
+@media (max-width: 1200px) {
+  .filters__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters__dropdown {
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .filters__group {
+    flex: 1 1 100%;
+  }
+
+  .filters__sort {
+    width: 100%;
+    justify-content: start;
+  }
+}
