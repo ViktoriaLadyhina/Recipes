@@ -34,6 +34,10 @@ It was created to practice modern frontend development skills using React, Redux
 * ESLint
 * React Icons
 
+### Demo
+
+[Live Demo on Vercel](https://recipes-app-nine-psi.vercel.app/)
+
 ### About
 
 This project is intended for learning and experimentation.  
@@ -73,6 +77,10 @@ Es wurde erstellt, um moderne Frontend-Entwicklungsfähigkeiten mit React, Redux
 * ESLint
 * React Icons
 
+### Demo
+
+[Live Demo auf Vercel](https://recipes-app-nine-psi.vercel.app/)
+
 ### Über das Projekt
 
 Dieses Projekt dient zum Lernen und Experimentieren.  
@@ -111,6 +119,10 @@ SPA для Рецептов — учебное одностраничное пр
 * Vite
 * ESLint
 * React Icons
+
+### Демо
+
+[Онлайн-версия на Vercel](https://recipes-app-nine-psi.vercel.app/)
 
 ### О проекте
 
