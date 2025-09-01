@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
-import "./CategoryCard.scss";
+import "./сategoryCard.scss";
 
 const CategoryCard = ({ category }) => {
     return (
